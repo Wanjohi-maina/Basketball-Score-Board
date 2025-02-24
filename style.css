@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ /* HOME & GUEST SECTION */
+.team-title {
+    font-size: 40px;
+}
+#container {
+    background:#1B244A;
+    width: 575px;
+    height: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.scoreboard {
+    width: 155px;
+    height: 120px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #080001;
+    color: #F94F6D;
+    font-size: 90px;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+
+}
+.point-counter-btn {
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    margin: 0 2px;
+    font-family: inherit;
+    cursor: pointer;
+}
+.point-counter-btn:hover {
+    background-color:  rgba(255,255,255,.5);
+}
+/* RESET SECTION */
+#reset-btn {
+    width: 575px;
+    border-radius: 10px;
+    background: #F94F6D;
+    color: white;
+    font-family: inherit;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 30px;
+}
+#reset-btn:hover {
+    background: #a13d50;
+}
