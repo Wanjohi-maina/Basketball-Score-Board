@@ -4,35 +4,32 @@ const homeScoreEl = document.getElementById("home-score")
 const guestScoreEl = document.getElementById("guest-score") 
 const resetEl = document.getElementById("reset-btn")
 
-//  HOME FUNCTION
-function increaseHomeScoreOne() {
-    homeScore += 1
-    homeScoreEl.textContent = homeScore
+function increaceScore (team, score) {
+    if(team === 'home') {
+        homeScore += score
+        homeScoreEl.textContent = homeScore
+    }
+    else if (team === 'guest'){
+        guestScore += score
+        guestScoreEl.textContent = guestScore
+    }
+    else {return}
+    // Adding "lead" class to indicate the team leading
+    if (homeScore > guestScore) {
+        homeScoreEl.classList.add("lead")
+        guestScoreEl.classList.remove("lead")
+    }
+    else if (homeScore < guestScore) {
+        homeScoreEl.classList.remove("lead")
+        guestScoreEl.classList.add("lead")
+    }
+    // Remove the "lead" class if the team's score is equal 
+    else {
+         homeScoreEl.classList.remove("lead")
+         guestScoreEl.classList.remove("lead")
+    }
 }
 
-
-function increaseHomeScoreTwo() {
-    homeScore += 2
-    homeScoreEl.textContent = homeScore
-}
-function increaseHomeScoreThree() {
-    homeScore += 3
-    homeScoreEl.textContent = homeScore
-}
-
-//  GUEST FUNCTION
-function increaseGuestScoreOne() {
-    guestScore += 1
-    guestScoreEl.textContent = guestScore
-}
-function increaseGuestScoreTwo() {
-    guestScore += 2
-    guestScoreEl.textContent = guestScore
-}
-function increaseGuestScoreThree() {
-    guestScore += 3
-    guestScoreEl.textContent = guestScore
-}
 
 //  RESET FUNCTION
 function resetGameScore() {
@@ -40,4 +37,6 @@ function resetGameScore() {
     guestScore = 0
     homeScoreEl.textContent = homeScore
     guestScoreEl.textContent = guestScore
+    homeScoreEl.classList.remove("lead")
+    guestScoreEl.classList.remove("lead")
 }
