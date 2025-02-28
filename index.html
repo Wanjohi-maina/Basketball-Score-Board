@@ -16,17 +16,17 @@
                 <div id="home-score" class="scoreboard">0</div>
                 <button 
                     id="home-score-btn-1" 
-                    onclick="increaseHomeScoreOne()" 
+                    onclick="increaseScore('home', 1)" 
                     class="point-counter-btn">+1
                 </button>
                 <button 
                     id="home-score-btn-2" 
-                    onclick="increaseHomeScoreTwo()" 
+                    onclick="increaseScore('home', 2)" 
                     class="point-counter-btn">+2
                 </button>
                 <button 
                     id="home-score-btn-3" 
-                    onclick="increaseHomeScoreThree()" 
+                    onclick="increaseScore('home', 3)" 
                     class="point-counter-btn">+3
                 </button>
             </div>
@@ -36,23 +36,23 @@
                 <div id="guest-score" class="scoreboard">0</div>
                 <button 
                     id="guest-score-btn-1" 
-                    onclick="increaseGuestScoreOne()" 
+                    onclick="increaseScore('guest', 1)" 
                     class="point-counter-btn">+1
                 </button>
                 <button 
                     id="guest-score-btn-2" 
-                    onclick="increaseGuestScoreTwo()" 
+                    onclick="increaseScore('guest', 2)" 
                     class="point-counter-btn">+2
                 </button>
                 <button 
                     id="guest-score-btn-3" 
-                    onclick="increaseGuestScoreThree()" 
+                    onclick="increaseScore('guest', 3)" 
                     class="point-counter-btn">+3
                 </button>
             </div>
         </div>
         <!-- RESET BUTTON -->
-        <button id="reset-btn" onclick="resetGameScore()">RESET GAME</button>
+        <button id="reset-btn" class="resetgame-btn" onclick="resetGameScore()">RESET GAME</button>
         <script src="index.js"></script>
     </body>
 </html>
