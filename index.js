@@ -4,7 +4,7 @@ const homeScoreEl = document.getElementById("home-score")
 const guestScoreEl = document.getElementById("guest-score") 
 const resetEl = document.getElementById("reset-btn")
 
-function increaceScore (team, score) {
+function increaseScore (team, score) {
     if(team === 'home') {
         homeScore += score
         homeScoreEl.textContent = homeScore
